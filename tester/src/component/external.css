@@ -1,0 +1,15 @@
+.color{
+	color: black;
+	background-color: grey;
+	font-size: 24px;
+	font-weight: 600;
+	width: 100%;
+}
+
+.another_color{
+	color: black;
+	background-color: grey;
+	font-size: 24px;
+	font-weight: 700;
+	width: 100%;
+}
