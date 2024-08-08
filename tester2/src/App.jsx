@@ -24,15 +24,6 @@ function App() {
         </div>
       </div>
       <div className="hero">
-        {/* <div className="side_bar">
-          <ul>
-            <a><li>link </li></a>
-            <a><li>link </li></a>
-            <a><li>link </li></a>
-            <a><li>link </li></a>
-            <a><li>link </li></a>
-          </ul>
-        </div> */}
         <div className="side_bar">
           <ul>
             <a href="">
