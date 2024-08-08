@@ -24,7 +24,64 @@ function App() {
         </div>
       </div>
       <div className="hero">
-        <div className="side_bar">SIDEBAR</div>
+        {/* <div className="side_bar">
+          <ul>
+            <a><li>link </li></a>
+            <a><li>link </li></a>
+            <a><li>link </li></a>
+            <a><li>link </li></a>
+            <a><li>link </li></a>
+          </ul>
+        </div> */}
+        <div className="side_bar">
+          <ul>
+            <a href="">
+              <li class="li_class">
+                link 1
+              </li>
+            </a>
+            <a href="">
+              <li class="li_class">
+                link 2
+              </li>
+            </a>
+            <a href="">
+              <li class="li_class">
+                link 3
+              </li>
+            </a>
+            <a href="">
+              <li class="li_class">
+                link 4
+              </li>
+            </a>
+            <a href="">
+              <li class="li_class">
+                link 5
+              </li>
+            </a>
+            <a href="">
+              <li class="li_class">
+                link 6
+              </li>
+            </a>
+            <a href="">
+              <li class="li_class">
+                link 7
+              </li>
+            </a>
+            <a href="">
+              <li class="li_class">
+                link 8
+              </li>
+            </a>
+            <a href="">
+              <li class="li_class">
+                link 9
+              </li>
+            </a>
+          </ul>
+        </div>
         <div className="content">CONTENT</div>
       </div>
       <div className="footer">FOOTER</div>
