@@ -3,14 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import reactlogo from './assets/react.svg'
-
+import parent from './components/parent'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div className="header">
+      {/* <div className="header">
         <div className="logo">
           <img class="logo_img" src={reactlogo}></img>
         </div>
@@ -75,7 +75,8 @@ function App() {
         </div>
         <div className="content">CONTENT</div>
       </div>
-      <div className="footer">FOOTER</div>
+      <div className="footer">FOOTER</div> */}
+      <parent></parent>
     </>
   )
 }

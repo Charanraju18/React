@@ -2,18 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
+import Parent from "./components/parent.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <>
-      <p>adfasdf</p>
-    </>
-    <>
-      <App />
-    </>
-
-    <>
-      <App></App>
-    </>
+    <Parent/>
   </>
 );

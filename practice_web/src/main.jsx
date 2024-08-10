@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import Header from "./assets/header.jsx"
+import Header from "/header.jsx"
 
 
 createRoot(document.getElementById("root")).render(
