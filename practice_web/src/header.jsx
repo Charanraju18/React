@@ -1,8 +1,11 @@
-import "header.css";
-const Header = () => {
-  <>
-    <div>asdfjfhtresdfgfeedfgnbgf</div>
-  </>;
+import "./header.css"
+
+function Header(){
+  return(
+    <>
+      <div>asdfjfhtresdfgfeedfgnbgf</div>
+    </>
+  )
 };
 
 export default Header;
