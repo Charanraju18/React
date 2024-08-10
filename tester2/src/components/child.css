@@ -2,7 +2,7 @@
 .details{
 	color: white;
 	width: 150px;
-	height: 150px;
+	height: fit-content;
 	border: 2px solid;
 	align-content: center;
 	text-align: center;
