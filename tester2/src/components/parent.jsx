@@ -22,9 +22,7 @@ function parent() {
     { n: "karthi", p: "actor", lm: "Japan"}
   ];
   return (
-
-    <div className="cards">
-      <hr></hr>
+    <>    <div className="cards">
       {/* {name} */}
       <Child
         luffy={luffy}
@@ -76,6 +74,9 @@ function parent() {
         func={fun}
       />
     </div>
+
+    </>
+
   );
 }
 
