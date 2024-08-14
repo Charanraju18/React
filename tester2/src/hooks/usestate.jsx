@@ -75,7 +75,8 @@ const Obj_Use_state = () =>{
   return(
     <>
       <div className='div1'>
-        <h1>My Favorite Car is {car.model}</h1>
+        <h1>Use State</h1>
+        <h2>My Favorite Car is {car.model}</h2>
         <p>It is a {car.color} car, from {car.brand} brand launched in {car.year}</p>
         <button onClick={changeColor} className='btn'>Change Details</button>
       </div>
