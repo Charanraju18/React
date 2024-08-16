@@ -3,26 +3,15 @@ import { useState } from 'react'
 import './usestate.css'
 
 function Usestate(){
-  const [first, setfirst] = useState(0)
-  const increment = () =>{
-    if(first===10){
-      setfirst(10)
-    }
-    else{
-      setfirst(first + 1)
-    }
-
+  const [first, abc] = useState(0)
+  const increment=()=>{
+      abc(first+1)
+      if(first==10){
+        abc(10)
+      }
   }
-  const decrement = () =>{
-    if(first===0){
-      setfirst(0)
-    }
-    else{
-      setfirst(first - 1)
-    }
-  }
-  const reset = () =>{
-    setfirst(0)
+  const decrement=()=>{
+    abc(first-1)
   }
   return(
     <>
@@ -31,7 +20,7 @@ function Usestate(){
         <p>Counter value = {first}</p>
         <button onClick={increment} className='btn'>Increment Counter</button>
         <button onClick={decrement} className='btn'>Decrement Counter</button>
-        <button onClick={reset} className='btn'>Reset to Zero</button>
+        <button onClick={()=> abc(0)} className='btn'>Reset to Zero</button>
       </div>
 
     </>
@@ -83,4 +72,4 @@ const Obj_Use_state = () =>{
     </>
   )
 }
-export default Obj_Use_state
+export default Usestate

@@ -35,6 +35,7 @@ function Use_Ref(){
 	return(
 		<>
 			<div className="div1">
+				<h2>Use Ref</h2>
 				<input type='text' ref={input_ele}/>
 				<button onClick={btnclicked} className='btn'>click me</button>
 			</div>
@@ -42,4 +43,4 @@ function Use_Ref(){
 	)
 }
 
-export default Use_Ref
+export default Use_Ref;
