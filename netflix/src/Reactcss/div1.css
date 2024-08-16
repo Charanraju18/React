@@ -1,0 +1,24 @@
+*{
+	box-sizing: border-box;
+}
+.onTV{
+	width: 100%;
+	height: 82svh;
+	background-color: black;
+	display: flex;
+	align-items: center;
+	padding: 4% 0;
+	margin: 0 5%;
+	box-sizing: border-box;
+}
+.left_matter{
+	width: 50%;
+	height: 100%;
+	color: white;
+	align-content: center;
+}
+.tv_unit{
+	width: 50%;
+	height:100%;
+
+}
