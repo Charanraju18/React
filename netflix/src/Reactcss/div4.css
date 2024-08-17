@@ -1,34 +1,32 @@
-*{
-	box-sizing: border-box;
-}
-.onTV{
+.kids{
 	width: 100%;
 	height: 82svh;
 	background-color: black;
 	display: flex;
 	align-items: center;
 	padding: 4% 0;
-	box-sizing: border-box;
 }
-.left_matter{
+.right_matter{
 	width: 50%;
 	height: 100%;
 	color: white;
 	align-content: center;
-	margin-left: 10%;
+	margin-right: 10%;
 }
-.left_matter h1{
+.right_matter h1{
 	font-size: 50px;
 	font-weight: 900;
 }
-.left_matter p{
+.right_matter p{
 	font-size: 24px;
 }
-.tv_unit{
-	margin-right: 10%;
+
+.kids_img{
+	margin-left: 10%;
 	width: 50%;
 	height:100%;
-	background-image: url('C:\Users\chara\OneDrive - Aditya Educational Institutions\Desktop\DR React\netflix\src\assets\tvframe.png');
+	background-image: url('C:\Users\chara\OneDrive - Aditya Educational Institutions\Desktop\DR React\netflix\src\assets\img2.png');
 	background-size: 100%;
 	background-repeat: no-repeat;
+	position: relative;
 }
