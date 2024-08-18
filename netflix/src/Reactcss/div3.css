@@ -5,6 +5,7 @@
 	display: flex;
 	align-items: center;
 	padding: 4% 0;
+	z-index: 40;
 }
 .left_matter{
 	width: 50%;
@@ -25,7 +26,28 @@
 	margin-right: 10%;
 	width: 50%;
 	height:100%;
-	background-image: url('C:\Users\chara\OneDrive - Aditya Educational Institutions\Desktop\DR React\netflix\src\assets\macframe.png');
-	background-size: 100%;
-	background-repeat: no-repeat;
+	position: relative;
+	z-index: 100;
+}
+.macframe img{
+	z-index: -50;
+}
+.mac_video{
+	position: absolute;
+	width: 65%;
+	height: 49%;
+	/* background-color: pink; */
+	left: 17.1%;
+	top: 12%;
+	z-index: -100;
+
+}
+.macframe video{
+	z-index: 45;
+}
+
+@media screen and (max-width:320px){
+	.macframe{
+		display: none;
+	}
 }
