@@ -22,9 +22,8 @@ function Use_effect0() {
 	</>
   )
 }
-
 function Use_effect(){
-	const flag=false;
+	const [flag,setflag]= useState(false);
 	const [first, setfirst] = useState(img1);
 	const clicked=()=>{
 		if(flag){
@@ -33,12 +32,12 @@ function Use_effect(){
 		else{
 			setfirst(img2)
 		}
-		flag=!flag
+		setflag(!flag)
 	}
 	return(
 		<>
 			<div className='image'>
-				<img src={}/>
+				<img src={img1}/>
 			</div>
 		</>
 	)
