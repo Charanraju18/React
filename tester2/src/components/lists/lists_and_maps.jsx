@@ -1,5 +1,5 @@
 import React from 'react'
-import {student_details} from './students_data';
+// import {student_details} from './students_data';
 import { Cars } from './car_models';
 import './cars_div.css'
 
@@ -84,14 +84,16 @@ function List_and_maps2(){
 function List_and_maps(){
 	return(
 		<>
+		<h1 style={{textAlign: 'center'}}>Lists And Maps</h1>
 			<div className='cars_division'>
+
 			{
 				Cars.map((items,index)=>{
 					return(
 						<>
 							<div key={index} className='inner_car'>
 								<img src={items.image} width={300}/>
-								<p><br/><b>MODEL</b> : {items.year} {items.brand} {items.model}</p>
+								<p><br/><b>MODEL</b> : {items.model}</p>
 							</div>
 						</>
 					)

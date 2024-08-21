@@ -1,0 +1,11 @@
+.cars_division{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.inner_car{
+	margin: 20px 40px;
+	border: 2px solid;
+	padding: 20px;
+	border-radius: 15px;
+}
