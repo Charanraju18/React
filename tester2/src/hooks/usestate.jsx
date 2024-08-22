@@ -3,15 +3,16 @@ import { useState } from 'react'
 import './usestate.css'
 
 function Usestate(){
-  const [first, abc] = useState(0)
+  const val=0;
+  const [first, setfirst] = useState(0)
   const increment=()=>{
-      abc(first+1)
+      setfirst(first+1)
       if(first==10){
-        abc(10)
+        setfirst(10)
       }
   }
   const decrement=()=>{
-    abc(first-1)
+    setfirst(first-1)
   }
   return(
     <>
@@ -20,7 +21,7 @@ function Usestate(){
         <p>Counter value = {first}</p>
         <button onClick={increment} className='btn'>Increment Counter</button>
         <button onClick={decrement} className='btn'>Decrement Counter</button>
-        <button onClick={()=> abc(0)} className='btn'>Reset to Zero</button>
+        <button onClick={()=> setfirst(0)} className='btn'>Reset to Zero</button>
       </div>
 
     </>

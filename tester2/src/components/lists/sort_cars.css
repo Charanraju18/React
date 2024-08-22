@@ -1,0 +1,10 @@
+.sort_cars{
+	width: fit-content;
+	border: 2px solid black;
+	margin: 2% 5%;
+	padding: 1%;
+}
+.Cars_Division{
+	display: flex;
+	flex-wrap: wrap;
+}

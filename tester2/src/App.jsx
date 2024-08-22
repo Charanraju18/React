@@ -9,6 +9,10 @@ import Use_Ref from './hooks/Use_Ref.jsx';
 import Usestate from './hooks/usestate.jsx';
 import List_and_maps from './components/lists/lists_and_maps.jsx';
 import React_Slick from './components/slicks/React_Slick.jsx';
+import {Sort_method,Cycle_sort} from './components/lists/sort_method.jsx';
+
+
+
 function App() {
   return (
     <>
@@ -23,6 +27,10 @@ function App() {
       <List_and_maps/>
 
       <React_Slick/>
+      <br />
+      <br />
+      <Sort_method/>
+      <Cycle_sort/>
     </>
   )
 }
