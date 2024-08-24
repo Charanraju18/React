@@ -8,3 +8,16 @@
 	display: flex;
 	flex-wrap: wrap;
 }
+.cycles{
+	/* display: flex; */
+	/* flex-direction: column; */
+	/* align-items: space-evenly; */
+	/* margin: 20px; */
+	border: 2px solid;
+	padding: 5px;
+}
+.outer_div{
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+}

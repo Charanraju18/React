@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './React_Slick.css'
 
-function React_Slick() {
+function React_Slick0() {
 const settings = {
 	dots: true,
 	className: "center",
@@ -90,4 +90,14 @@ const settings = {
   )
 }
 
-export default React_Slick
+
+function React_Slick1(){
+	return(
+		<>
+			
+		</>
+	)
+}
+
+
+export {React_Slick0}

@@ -59,14 +59,9 @@ function Sort_method() {
 }
 
 function Cycle_sort(){
+
 	const cycle = [
-		{
-			image: 'https://www.herocycles.com/dw/image/v2/BGQH_PRD/on/demandware.static/-/Sites-cycles-master/default/dw27b4d07c/Products/F11/BCF1120BLBK001/medium.png?sh=160&sfrm=png',
-			brand : 'Hero',
-			model : 'F11',
-			price : '6600',
-			colors : ['black','blue','red']
-		},
+
 		{
 			image: 'https://www.herocycles.com/dw/image/v2/BGQH_PRD/on/demandware.static/-/Sites-cycles-master/default/dw00724f10/Products/Slingshot/BCSLS26BKGN001/Medium%20(1).png?sh=160&sfrm=png',
 			brand : 'Hero',
@@ -87,25 +82,43 @@ function Cycle_sort(){
 			model : 'MILANO',
 			price : '11515',
 			colors : ['silver','black']
+		},
+		{
+			image: 'https://www.herocycles.com/dw/image/v2/BGQH_PRD/on/demandware.static/-/Sites-cycles-master/default/dw27b4d07c/Products/F11/BCF1120BLBK001/medium.png?sh=160&sfrm=png',
+			brand : 'Hero',
+			model : 'F11',
+			price : '6600',
+			colors : ['black','blue','red']
 		}
 	]
+	const Sort = () =>{
+		cycle.sort((n1,n2)=>[(n1.price)-(n2.price)])
+	}
 	return(
-		cycle.map((item,index)=>{
-			return(
-				<>
-					<img src={item.image} width={300}/>
-					<p>Brand : {item.brand}</p>
-					<p>Model Name : {item.model}</p>
-					<p>Price : {item.price}</p>
-					<p>Colors : {item.colors.map(color=>{
-						return(
-							<p>{color}</p>
-						)
-					})}</p>
-				</>
-			)
-		})
+		<>
+		<button onClick={Sort}>Sort By Price</button>
+		<div className='outer_div'>
+			{
+				cycle.map((item,index) => {
+					return(
+						<div className='cycles'>
+							<img src={item.image} width={300}/>
+							<p>Brand : {item.brand}</p>
+							<p>Model Name : {item.model}</p>
+							<p>Price : {item.price}</p>
+							<p>Colors : {item.colors.map(color=>{
+								return(
+									<p>{color}</p>
+								)
+							})}</p>
+						</div>
+					)
+				})
+			}
+		</div>
+		</>
 	)
+
 }
 
 export {Sort_method,Cycle_sort}

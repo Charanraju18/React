@@ -2,6 +2,8 @@ import React from 'react'
 // import {student_details} from './students_data';
 import { Cars } from './car_models';
 import './cars_div.css'
+import { dataObj } from './dummydata';
+
 
 const arr = [1,2,3,4,5,6,7,8,9,0];
 const fruit = ['apple','banana','mango','orange','pineapple']
@@ -81,7 +83,7 @@ function List_and_maps2(){
 }
 
 
-function List_and_maps(){
+function List_and_maps3(){
 	return(
 		<>
 		<h1 style={{textAlign: 'center'}}>Lists And Maps</h1>
@@ -104,5 +106,33 @@ function List_and_maps(){
 	)
 }
 
+
+function List_and_maps(){
+
+	const totalCost = () =>{
+		return(dataObj.reduce((sum,item)=>sum+item.price,0))
+	}
+
+
+	const filteredData = dataObj.filter((data)=>data.price > 500);
+	console.log(filteredData)
+
+	return(
+		<>
+			<div>
+				<br/><br/><br/><br/>
+				<h1 style={{textAlign: 'center'}}>List and Maps Filter,Search,Sort,Reduce Methods</h1>
+				<p>Total Cost : {totalCost().toFixed(2)}</p>
+				{
+					dataObj.map((product,ind)=>{
+						return(
+							<></>
+						)
+					})
+				}
+			</div>
+		</>
+	)
+}
 
 export default List_and_maps
