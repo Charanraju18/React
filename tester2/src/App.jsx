@@ -10,27 +10,16 @@ import Usestate from './hooks/usestate.jsx';
 import List_and_maps from './components/lists/lists_and_maps.jsx';
 import {React_Slick0} from './components/slicks/React_Slick.jsx';
 import {Sort_method,Cycle_sort} from './components/lists/sort_method.jsx';
-
-
+import {Events,OnchangeEvent,OnMouseEvent} from './pages/Events.jsx';
+import Forms from './pages/Forms/Forms.jsx';
 
 function App() {
   return (
     <>
-      {/* <Parent/>
-      <Render/>
-      <StyleFunction/> */}
-      {/* <UseStateTwo/> */}
-      <Usestate/>
-      {/* <Obj_Use_state/> */}
-      <Use_effect/>
-      <Use_Ref/>
-      <List_and_maps/>
-
-      <React_Slick0/>
-      <br />
-      <br />
-      <Sort_method/>
-      <Cycle_sort/>
+      {/* <Events/>
+      <OnchangeEvent/>
+      <OnMouseEvent/> */}
+      <Forms/>
     </>
   )
 }

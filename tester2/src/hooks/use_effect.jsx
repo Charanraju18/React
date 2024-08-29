@@ -3,13 +3,13 @@ import './usestate.css'
 import img1 from '../assets/luffy.webp'
 import img2 from '../assets/netflix.jpg'
 
-function Use_effect0() {
-	const [count, setcount] = useState(0)
+function Use_effect() {
+	const [count, setfirst] = useState(0)
 	useEffect(() => {
 		setTimeout(() => {
-			setfirst(first-1)
+			setfirst(count+1)
 		}, 10);
-		if(first==0){
+		if(count==0){
 			setfirst(100);
 		}
 	},[])
@@ -22,7 +22,7 @@ function Use_effect0() {
 	</>
   )
 }
-function Use_effect(){
+function Use_effect0(){
 	const [flag,setflag]= useState(false);
 	const [first, setfirst] = useState(img1);
 	const clicked=()=>{
