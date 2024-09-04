@@ -4,7 +4,7 @@ import img1 from '../../assets/download_svg_icon.png'
 import img2 from '../../assets/kids_profile_svg_icon.png'
 import img3 from '../../assets/stream_svg_icon.png'
 import img4 from '../../assets/tv_svg_icon.png'
-function Forms() {
+function Forms1() {
   const [name, setname] = useState("");
   const [phone, setphone] = useState();
   const [email, setemail] = useState("");
@@ -89,4 +89,119 @@ function Forms() {
   );
 }
 
+function Forms(){
+  const [userData, setuserData] = useState({
+    name : '',
+    phNumber : '',
+    email: '',
+    password : '',
+    gender: '',
+  });
+
+  const handleChange = (e) =>{
+    const {name,value} = e.target;
+    setuserData(prev=>({...prev , [name]:value}))
+  }
+
+  const submitForm = () =>{
+    console.log(userData);
+  }
+  const [college, setcollege] = useState('Select')
+  const selectCollege = (e) =>{
+    console.log(e.target.value)
+    setcollege(e.target.value)
+  }
+  return (
+    <>
+    <div className="Forms">
+      <h1>Forms</h1>
+      <label>
+        Enter Your Name: <br />
+        <input
+          type="text"
+          placeholder="Name"
+          name="name"
+          onChange={(e) => {
+            handleChange(e);
+          }}
+        ></input>
+      </label>
+      <br></br>
+      <label>
+        Enter Your Phone Number: <br />
+        <input
+          type="number"
+          placeholder="Phone"
+          name="phNumber"
+          onChange={(e) => {
+            handleChange(e);
+          }}
+        ></input>
+      </label>
+      <br></br>
+      <label>
+        Enter Your Email: <br />
+        <input
+          type="email"
+          placeholder="Email"
+          name="email"
+          onChange={(e) => {
+            handleChange(e);
+          }}
+        ></input>
+      </label>
+      <br></br>
+      <label>
+        Enter Your Password: <br />
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          onChange={(e) => {
+            handleChange(e);
+          }}
+        ></input>
+      </label>
+      <br></br>
+      <label>
+        Enter Gender: <br />
+        <input
+          type="radio"
+          name="gender"
+          value="Male"
+          onChange={(e) => {
+            handleChange(e);
+          }}
+        ></input>Male
+      </label>
+      <br></br>
+      <label>
+        <input
+          type="radio"
+          name="gender"
+          value="Female"
+          onChange={(e) => {
+            handleChange(e);
+          }}
+        ></input>Female
+      </label>
+      <br></br>
+      <select value={college} onChange={selectCollege}>
+          <option value="Select">Select</option>
+          <option value="AEC">AEC</option>
+          <option value="ACET">ACET</option>
+          <option value="ACOE">ACOE</option>
+      </select>
+      <button onClick={submitForm}>Submit</button>
+      <br></br>
+      <p>Name : {userData.name}</p>
+		<p>Phone : {userData.phNumber}</p>
+		<p>Email : {userData.email}</p>
+		<p>Password : {userData.password}</p>
+    <p>Gender : {userData.gender}</p>
+    </div>
+
+    </>
+  )
+}
 export default Forms;
