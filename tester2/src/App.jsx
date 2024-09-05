@@ -12,6 +12,7 @@ import {React_Slick0} from './components/slicks/React_Slick.jsx';
 import {Sort_method,Cycle_sort} from './components/lists/sort_method.jsx';
 import {Events,OnchangeEvent,OnMouseEvent} from './pages/Events.jsx';
 import Forms from './pages/Forms/Forms.jsx';
+import Farmer from './pages/farmer/Farmer.jsx';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
       {/* <Events/>
       <OnchangeEvent/>
       <OnMouseEvent/> */}
-      <Forms/>
+      {/* <Forms/> */}
+      <Farmer/>
     </>
   )
 }
