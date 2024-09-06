@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import Local from './Pages/Local'
 import './App.css'
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
     pre.push(userData);
     localStorage.setItem("userdata",JSON.stringify(pre));
     var x = document.getElementsByClassName("saved");
-    
   };
 
   if(!localStorage.getItem("userdata")){
