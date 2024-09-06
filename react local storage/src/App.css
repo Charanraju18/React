@@ -1,0 +1,42 @@
+.login{
+	width: 350px;
+	height: 400px;
+	background-color: pink;
+	margin: auto;
+	position: relative;
+	padding: 10px;
+	border-radius: 15px;
+	line-height: 20px;
+}
+.saved{
+	position: absolute;
+	right: 10px;
+	border-radius: 15px;
+	font-size: 20px;
+	width: fit-content;
+	height: fit-content;
+	color: white;
+	background: linear-gradient(to right, pink,skyblue);
+	padding: 3px 20px;
+	/* display: none; */
+}
+form{
+	margin-left: 20px;
+}
+input{
+	/* border-radius: 15px; */
+	/* outline: none; */
+	/* border: none; */
+	width: 80%;
+	height: 22px;
+	border-radius: 5px;
+	outline: none;
+	border: 1px solid;
+}
+.btn{
+	position: absolute;
+	width: 70px;
+	height: fit-content;
+	left: 140px;
+	bottom: 125px;
+}
