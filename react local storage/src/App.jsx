@@ -13,11 +13,13 @@ function App() {
     setuserData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const [saved, setsaved] = useState(false)
+
   const submitForm = () => {
     const pre = JSON.parse(localStorage.getItem("userdata"));
     pre.push(userData);
     localStorage.setItem("userdata",JSON.stringify(pre));
-    var x = document.getElementsByClassName("saved");
+    setsaved(true)
   };
 
   if(!localStorage.getItem("userdata")){
@@ -26,7 +28,7 @@ function App() {
 
   return (
     <>
-      <div className='saved'>
+      <div className={`${saved ? "saved" : "unsaved"}`}>
         <p>User Data Saved</p>
       </div>
       <div className='login'>
