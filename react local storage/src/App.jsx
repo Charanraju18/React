@@ -20,6 +20,9 @@ function App() {
     pre.push(userData);
     localStorage.setItem("userdata",JSON.stringify(pre));
     setsaved(true)
+    setTimeout(() => {
+      setsaved(false);
+    }, 3000);
   };
 
   if(!localStorage.getItem("userdata")){
@@ -28,7 +31,7 @@ function App() {
 
   return (
     <>
-      <div className={`${saved ? "saved" : "unsaved"}`}>
+      <div className={`saved-message ${saved ? 'visible' : 'hidden'}`}>
         <p>User Data Saved</p>
       </div>
       <div className='login'>
@@ -43,7 +46,7 @@ function App() {
         <label>Branch :</label><br />
         <input type='text' placeholder='Enter Branch' name='branch' onChange={addUser}></input><br />
         </form>
-        <button className='btn' onClick={submitForm}>Submit</button>
+        <button className='btn' onClick={submitForm}>Click To Submit</button>
       </div>
     </>
   )

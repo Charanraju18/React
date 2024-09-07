@@ -8,7 +8,7 @@
 	border-radius: 15px;
 	line-height: 20px;
 }
-.saved{
+.saved-message{
 	position: absolute;
 	right: 10px;
 	border-radius: 15px;
@@ -21,11 +21,15 @@
 	/* display: none; */
 	transition: all .3s linear;
 }
-.unsaved{
-	position: absolute;
-	top: -100%;
-	opacity: 0;
+.saved-message.visible {
+	opacity: 1;
 }
+
+.saved-message.hidden {
+	opacity: 0;
+	cursor:default;
+}
+
 form{
 	margin-left: 20px;
 }
