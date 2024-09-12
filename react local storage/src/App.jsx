@@ -44,7 +44,7 @@ function App() {
         <label>College :</label><br />
         <input type='text' placeholder='Enter College' name='college' onChange={addUser}></input><br />
         <label>Branch :</label><br />
-        <input type='text' placeholder='Enter Branch' name='branch' onChange={addUser}></input><br />
+        <input type='text' placeholder= 'Enter Branch' name='branch' onChange={addUser}></input><br />
         </form>
         <button className='btn' onClick={submitForm}>Click To Submit</button>
       </div>
