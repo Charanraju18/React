@@ -21,7 +21,7 @@ function App() {
     localStorage.setItem("userdata",JSON.stringify(pre));
     setsaved(true)
     setTimeout(() => {
-      setsaved(true);
+      setsaved(false);
     }, 3000);
   };
 
