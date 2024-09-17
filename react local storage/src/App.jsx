@@ -22,8 +22,6 @@ function App() {
     setsaved(true)
     setTimeout(() => {
       setsaved(false);
-      console.log("just a commit")
-      console.log("just a second commit")
     }, 3000);
   };
 
