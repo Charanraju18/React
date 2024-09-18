@@ -213,16 +213,16 @@ const Forms = () => {
     roll: "",
     college: "",
   });
-  var obj = [];
+  // var obj = [];
   const addUser = (e) => {
     const { name, value } = e.target;
     setuserData((prev) => ({ ...prev, [name]: value }));
   };
   const submitForm = (e) => {
     e.preventDefault();
-    console.log(userData);
-    obj.push(userData);
-    console.log(obj);
+    // console.log(userData);
+    // obj.push(userData);
+    // console.log(obj);
     localStorage.setItem("userdata", JSON.stringify(userData));
   };
 
@@ -233,15 +233,14 @@ const Forms = () => {
     }
 
     var userdt = JSON.parse(localStorage.getItem("userdata"));
-    console.log( typeof userdt);
 
-
+    // userdt.append(userData);
     localStorage.setItem("userdata", JSON.stringify(userdt));
-  }, []);
+  },[userData]);
   return (
     <>
       <h2>Forms</h2>
-      <form onClick={submitForm}>
+      <form>
         <input
           type="text"
           placeholder="Enter Name"
@@ -263,7 +262,7 @@ const Forms = () => {
           onChange={addUser}
         ></input>
         <br />
-        <button type="submit">Submit</button>
+        <button onClick={submitForm}>Submit</button>
       </form>
     </>
   );

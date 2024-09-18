@@ -20,8 +20,8 @@ function App() {
       {/* <Events/>
       <OnchangeEvent/>
       <OnMouseEvent/> */}
-      {/* <Forms/> */}
-      <Farmer/>
+      <Forms/>
+      {/* <Farmer/> */}
     </>
   )
 }
