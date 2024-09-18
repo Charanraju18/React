@@ -207,64 +207,96 @@ function Forms2() {
   );
 }
 
-const Forms = () => {
-  const [userData, setuserData] = useState({
-    name: "",
-    roll: "",
-    college: "",
-  });
-  // var obj = [];
-  const addUser = (e) => {
-    const { name, value } = e.target;
-    setuserData((prev) => ({ ...prev, [name]: value }));
-  };
-  const submitForm = (e) => {
-    e.preventDefault();
-    // console.log(userData);
-    // obj.push(userData);
-    // console.log(obj);
-    localStorage.setItem("userdata", JSON.stringify(userData));
-  };
+function Forms() {
+    const [name, setName] = useState('');
+    const [college, setCollege] = useState('');
+    const [branch, setBranch] = useState('');
+    const [user, setUser] = useState('');
+    const [password, setPassword] = useState('');
 
-  useEffect(() => {
-    console.log("Rrendered");
-    if (localStorage.getItem("userdata") == null) {
-      localStorage.setItem("userdata", JSON.stringify("[]"));
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if ( localStorage.getItem("user") === null) {
+            localStorage.setItem("user", JSON.stringify([]));
+        }
+        const user1 = {
+            name: name,
+            college: college,
+            branch: branch,
+            user: user,
+            password: password
+        }
+        const users = JSON.parse(localStorage.getItem("user"));
+        users.push(user1);
+
+        console.log(users)
+        localStorage.setItem("user", JSON.stringify(users));
+
+
+
+        setName('');
+        setBranch("");
+        setCollege("");
+        setUser("");
+        setPassword("");
+        console.log(name, college, branch);
     }
 
-    var userdt = JSON.parse(localStorage.getItem("userdata"));
+    const handleName = (e) => {
+        setName(e.target.value);
+    }
+    const handleCollege = (e) => {
+        setCollege(e.target.value);
+    }
+    const handleBranch = (e) => {
+        setBranch(e.target.value);
+    }
+    const handleUser = (e) => {
+        setUser(e.target.value);
+    }
+    const handlePassword = (e) => {
+        setPassword(e.target.value);
+    }
 
-    // userdt.append(userData);
-    localStorage.setItem("userdata", JSON.stringify(userdt));
-  },[userData]);
-  return (
-    <>
-      <h2>Forms</h2>
-      <form>
-        <input
-          type="text"
-          placeholder="Enter Name"
-          name="name"
-          onChange={addUser}
-        ></input>
-        <br></br>
-        <input
-          type="text"
-          placeholder="Enter Roll Number"
-          name="roll"
-          onChange={addUser}
-        ></input>
-        <br />
-        <input
-          type="text"
-          placeholder="Enter College"
-          name="college"
-          onChange={addUser}
-        ></input>
-        <br />
-        <button onClick={submitForm}>Submit</button>
-      </form>
-    </>
-  );
-};
+
+    return (
+        <div>
+            <form action="" className='formEx' onSubmit={handleSubmit}  >
+                <div className="side">
+                <label htmlFor="">Name :</label><input type="text"
+                    value={name} onChange={handleName} /> <br />
+                </div>
+                <div className="side">
+                <label htmlFor="">college :</label><input type="text" name="" value={college} onChange={handleCollege} /> <br />
+
+                </div>
+                <div className="side">
+                <label htmlFor="">branch :</label><input type="text" name="" value={branch} onChange={handleBranch} /> <br />
+
+                </div>
+                <div className="side">
+                <label htmlFor="">user : </label> <input type="text" name=""  onChange={handleUser} />  <br />
+
+                </div>
+                <div className="side">
+                <label htmlFor="">Password</label> <input type="password" name=""  onChange={handlePassword} />
+                </div>
+
+
+
+                <button className='sub-button' type="submit" >submit</button>
+            </form>
+
+            <div>
+                <p> name :{name}</p>
+                <p> branch :{branch}</p>
+                <p> college :{college}</p>
+                <p> user :{user}</p>
+                <p> password :{password}</p>
+            </div>
+
+        </div>
+    )
+}
 export default Forms;
