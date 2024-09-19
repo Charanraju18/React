@@ -1,7 +1,11 @@
 import React,{useState} from 'react'
 import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home/Home';
+import About from './Pages/About/About';
+import Contact from './Pages/Contact/Contact';
 
-function App() {
+function App1() {
   const [userData, setuserData] = useState({
     name: "",
     rollNumber: "",
@@ -49,6 +53,18 @@ function App() {
         <button className='btn' onClick={submitForm}>Click To Submit</button>
       </div>
     </>
+  )
+}
+
+function App(){
+  return(
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/contact" element={<Contact/>}></Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
