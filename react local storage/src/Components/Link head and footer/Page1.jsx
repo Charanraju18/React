@@ -16,6 +16,7 @@ function Page1() {
         <h2>Header</h2>
       </div>
       <div className="footer">
+        
         <h2>Footer</h2>
       </div>
     </div>
